@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Tanpopo Academy Theme Colors */
+  --tanpopo-green: hsl(126, 17%, 33%);
+  --tanpopo-white: hsl(0, 0%, 96%);
+  --tanpopo-beige: hsl(46, 31%, 39%);
+  
+  /* Base Colors */
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(95, 17%, 48%);
+  --card: hsl(0, 0%, 97%);
+  --card-foreground: hsl(95, 17%, 48%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(95, 17%, 48%);
+  --primary: hsl(95, 17%, 48%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(0, 0%, 100%);
+  --secondary-foreground: hsl(95, 17%, 48%);
+  --muted: hsl(0, 0%, 100%);
+  --muted-foreground: hsl(95, 17%, 40%);
+  --accent: hsl(34, 30%, 90%);
+  --accent-foreground: hsl(95, 17%, 48%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(84, 17%, 91%);
+  --border: hsl(95, 17%, 80%);
+  --input: hsl(84, 17%, 95%);
+  --ring: hsl(95, 17%, 48%);
+  
+  /* Fonts */
+  --font-display: 'Nunito Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Georgia', serif;
+  --font-mono: 'Menlo', monospace;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: hsl(95, 17%, 10%);
+  --foreground: hsl(84, 17%, 91%);
+  --card: hsl(95, 17%, 15%);
+  --card-foreground: hsl(84, 17%, 91%);
+  --popover: hsl(95, 17%, 10%);
+  --popover-foreground: hsl(84, 17%, 91%);
+  --primary: hsl(95, 17%, 48%);
+  --primary-foreground: hsl(84, 17%, 91%);
+  --secondary: hsl(34, 30%, 30%);
+  --secondary-foreground: hsl(84, 17%, 91%);
+  --muted: hsl(95, 17%, 20%);
+  --muted-foreground: hsl(84, 17%, 70%);
+  --accent: hsl(34, 30%, 20%);
+  --accent-foreground: hsl(84, 17%, 91%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(84, 17%, 91%);
+  --border: hsl(95, 17%, 25%);
+  --input: hsl(95, 17%, 20%);
+  --ring: hsl(95, 17%, 48%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+  
+  .parallax {
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+  }
+
+  .tanpopo-gradient {
+    background: var(--tanpopo-white) ;
+  }
+
+  .text-tanpopo-green {
+    color: var(--tanpopo-green);
+  }
+
+  .text-tanpopo-white {
+    color: var(--tanpopo-white);
+  }
+
+  .text-tanpopo-beige {
+    color: var(--tanpopo-beige);
+  }
+
+  .bg-tanpopo-green {
+    background-color: var(--tanpopo-green);
+  }
+
+  .bg-tanpopo-white {
+    background-color: var(--tanpopo-white);
+  }
+
+  .bg-tanpopo-beige {
+    background-color: var(--tanpopo-beige);
+  }
+
+  .border-tanpopo-green {
+    border-color: var(--tanpopo-green);
+  }
+
+  .hover\:bg-tanpopo-green:hover {
+    background-color: var(--tanpopo-green);
+  }
+
+  .hover\:text-tanpopo-beige:hover {
+    color: var(--tanpopo-beige);
+  }
+}

@@ -1,0 +1,117 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+// ===== Theme Colors (Tanpopo) =====
+const colors = {
+  green: "#738D66", // Turf Green (Pantone 17-0119 TPX)
+  white: "#E6E8E5", // Star White (Pantone 11-4202 TPX)
+  beige: "#C9A87C", // Beige (Pantone 14-1118 TPX)
+};
+
+// ===== Helpers =====
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.6 } }),
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
+};
+
+// ===== Top Nav =====
+function TopNav() {
+  return (
+    <div style={{ backgroundColor: colors.white }} className="fixed top-0 left-0 right-0 z-40 backdrop-blur border-b border-zinc-200">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div style={{ backgroundColor: colors.green }} className="h-8 w-8 rounded-xl" />
+          <span className="font-semibold" style={{ color: colors.green }}>Tanpopo Kindergarten</span>
+        </div>
+        <nav className="hidden md:flex items-center gap-8 text-sm" style={{ color: colors.green }}>
+          <a href="#chuong-trinh-hoc" className="hover:opacity-80">Chương trình học</a>
+          <a href="#chuong-trinh" className="hover:opacity-80">Chương trình</a>
+          <a href="#co-so-vat-chat" className="hover:opacity-80">Cơ sở vật chất</a>
+          <a href="#tuyen-sinh" className="hover:opacity-80">Tuyển sinh</a>
+          <a href="#lien-he" className="hover:opacity-80">Liên hệ</a>
+          <a href="/portal" style={{ backgroundColor: colors.green }} className="px-3 py-1.5 rounded-full text-white">Đăng nhập</a>
+        </nav>
+      </div>
+    </div>
+  );
+}
+
+// ===== Hover Sidebar (mở khi di chuột) =====
+function HoverSidebar() {
+  return (
+    <aside className="group fixed top-16 left-0 bottom-0 z-30">
+      <div style={{ backgroundColor: colors.white }} className="h-full backdrop-blur border-r border-zinc-200 transition-[width] duration-300 overflow-hidden w-16 group-hover:w-64">
+        <div className="p-3 flex flex-col gap-2">
+          <SidebarItem icon="📘" label="Chương trình học" href="#chuong-trinh-hoc" />
+          <SidebarItem icon="🎒" label="Lớp học" href="#chuong-trinh" />
+          <SidebarItem icon="🏫" label="Cơ sở vật chất" href="#co-so-vat-chat" />
+          <SidebarItem icon="🧒" label="Đội ngũ" href="#doi-ngu" />
+          <SidebarItem icon="🧾" label="Học phí" href="#hoc-phi" />
+          <SidebarItem icon="🗺️" label="Bản đồ" href="#ban-do" />
+        </div>
+        <div className="mt-auto p-3">
+          <a href="/admin" className="block text-sm" style={{ color: colors.green }}>→ Admin (/admin)</a>
+        </div>
+      </div>
+    </aside>
+  );
+}
+
+function SidebarItem({ icon, label, href }: { icon: string; label: string; href: string }) {
+  return (
+    <a href={href} className="flex items-center gap-3 px-3 py-2 rounded-xl hover:opacity-80" style={{ color: colors.green }}>
+      <span className="text-lg leading-none">{icon}</span>
+      <span className="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">{label}</span>
+    </a>
+  );
+}
+
+// ===== Hero với hiệu ứng cuộn =====
+function Hero() {
+  return (
+    <section style={{ backgroundColor: colors.white }} className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+      <div className="relative z-10 text-center px-4">
+        <motion.h1
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-4xl md:text-6xl font-semibold tracking-tight"
+          style={{ color: colors.green }}
+        >
+          Tanpopo – Môi trường mầm non <span style={{ color: colors.beige }}>an toàn</span> & truyền cảm hứng
+        </motion.h1>
+        <motion.p
+          variants={fadeUp}
+          custom={1}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-4 text-lg max-w-2xl mx-auto"
+          style={{ color: colors.green }}
+        >
+          Thiết kế tối giản, màu chủ đạo xanh lá, be và trắng mang đến cảm giác ấm áp & thân thiện.
+        </motion.p>
+      </div>
+    </section>
+  );
+}
+
+// ===== Page =====
+export default function LandingPageTanpopo() {
+  return (
+    <div className="min-h-screen" style={{ backgroundColor: colors.white }}>
+      <TopNav />
+      <HoverSidebar />
+      <main className="pt-16 pl-16">
+        <Hero />
+        {/* Các section khác giữ nguyên logic cũ, chỉ thêm màu theo theme Tanpopo */}
+      </main>
+    </div>
+  );
+}

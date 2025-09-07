@@ -1,0 +1,897 @@
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanpopo Academy - Trường Mầm Non Uy Tín</title>
+    <meta name="description" content="Tanpopo Academy - Môi trường mầm non an toàn, truyền cảm hứng với phương pháp giáo dục hiện đại và đội ngũ giáo viên chuyên nghiệp.">
+    <meta name="keywords" content="trường mầm non, mẫu giáo, giáo dục mầm non, Tanpopo Academy">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVFiFtZZPbBtFFMZ/M7ubXdtdb1xSFyeilBapySVU8h8OoFaooFSqiihIVIpQBKci6KEg9Q6H9kovIHoCIVQJJCKE1ENFjnAgcaSGC6rEnxBwA04Tx43t2FnvDAfjkNibxgHxnWb2e/u992bee7tCa00YFsffekFY+nUzFtjW0LrvjRXrCDIAaPLlW0nHL0SsZtVoaF98mLrx3pdhOqLtYPHChahZcYYO7KvPFxvRl5XPp1sN3adWiD1ZAqD6XYK1b/dvE5IWryTt2udLFedwc1+9kLp+vbbpoDh+6TklxBeAi9TL0taeWpdmZzQDry0AcO+jQ12RyohqqoYoo8RDwJrU+qXkjWtfi8Xxt58BdQuwQs9qC/afLwCw8tnQbqYAPsgxE1S6F3EAIXux2oQFKm0ihMsOF71dHYx+f3NND68ghCu1YIoePPQN1pGRABkJ6Bus96CutRZMydTl+TvuiRW1m3n0eDl0vRPcEysqdXn+jsQPsrHMquGeXEaY4Yk4wxWcY5V/9scqOMOVUFthatyTy8QyqwZ+kDURKoMWxNKr2EeqVKcTNOajqKoBgOE28U4tdQl5p5bwCw7BWquaZSzAPlwjlithJtp3pTImSqQRrb2Z8PHGigD4RZuNX6JYj6wj7O4TFLbCO/Mn/m8R+h6rYSUb3ekokRY6f/YukArN979jcW+V/S8g0eT/N3VN3kTqWbQ428m9/8k0P/1aIhF36PccEl6EhOcAUCrXKZXXWS3XKd2vc/TRBG9O5ELC17MmWubD2nKhUKZa26Ba2+D3P+4/MNCFwg59oWVeYhkzgN/JDR8deKBoD7Y+ljEjGZ0sosXVTvbc6RHirr2reNy1OXd6pJsQ+gqjk8VWFYmHrwBzW/n+uMPFiRwHB2I7ih8ciHFxIkd/3Omk5tCDV1t+2nNu5sxxpDFNx+huNhVT3/zMDz8usXC3ddaHBj1GHj/As08fwTS7Kt1HBTmyN29vdwAw+/wbwLVOJ3uAD1wi/dUH7Qei66PfyuRj4Ik9is+hglfbkbfR3cnZm7chlUWLdwmprtCohX4HUtlOcQjLYCu+fzGJH2QRKvP3UNz8bWk1qMxjGTOMThZ3kvgLI5AzFfo379UAAAAASUVORK5CYII=" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tanpopo-green': '#738D66',
+                        'tanpopo-white': '#E6E8E5',
+                        'tanpopo-beige': '#C9A87C',
+                    },
+                    fontFamily: {
+                        'display': ['Poppins', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Heroicons -->
+    <script src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/index.js"></script>
+    
+    <style>
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-4px);
+        }
+        
+        .parallax {
+            transform: translateY(0);
+            transition: transform 0.1s ease-out;
+        }
+    </style>
+</head>
+
+<body class="font-body bg-tanpopo-white text-tanpopo-green smooth-scroll">
+    <!-- @COMPONENT: TopNav -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-tanpopo-white/95 backdrop-blur-md border-b border-tanpopo-green/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <!-- Logo image placeholder for the provided Tanpopo Academy logo -->
+                    <div class="w-10 h-10 bg-tanpopo-green rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">T</span>
+                    </div>
+                    <span class="font-display font-semibold text-tanpopo-green text-lg">Tanpopo Academy</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#chuong-trinh-hoc" class="text-tanpopo-green hover:text-tanpopo-beige transition-colors duration-200">Chương trình học</a>
+                    <a href="#co-so-vat-chat" class="text-tanpopo-green hover:text-tanpopo-beige transition-colors duration-200">Cơ sở vật chất</a>
+                    <a href="#doi-ngu" class="text-tanpopo-green hover:text-tanpopo-beige transition-colors duration-200">Đội ngũ</a>
+                    <a href="#tuyen-sinh" class="text-tanpopo-green hover:text-tanpopo-beige transition-colors duration-200">Tuyển sinh</a>
+                    <a href="#lien-he" class="text-tanpopo-green hover:text-tanpopo-beige transition-colors duration-200">Liên hệ</a>
+                    <a href="/portal" class="bg-tanpopo-green text-white px-4 py-2 rounded-full hover:bg-tanpopo-green/90 transition-colors duration-200">Đăng nhập</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-tanpopo-white border-t border-tanpopo-green/10">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#chuong-trinh-hoc" class="block py-2 text-tanpopo-green hover:text-tanpopo-beige">Chương trình học</a>
+                <a href="#co-so-vat-chat" class="block py-2 text-tanpopo-green hover:text-tanpopo-beige">Cơ sở vật chất</a>
+                <a href="#doi-ngu" class="block py-2 text-tanpopo-green hover:text-tanpopo-beige">Đội ngũ</a>
+                <a href="#tuyen-sinh" class="block py-2 text-tanpopo-green hover:text-tanpopo-beige">Tuyển sinh</a>
+                <a href="#lien-he" class="block py-2 text-tanpopo-green hover:text-tanpopo-beige">Liên hệ</a>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: TopNav -->
+
+    <!-- @COMPONENT: HoverSidebar -->
+    <aside class="group fixed top-16 left-0 bottom-0 z-40 hidden lg:block">
+        <div class="h-full bg-tanpopo-white/95 backdrop-blur-md border-r border-tanpopo-green/10 transition-all duration-300 overflow-hidden w-16 group-hover:w-64">
+            <div class="p-3 space-y-2">
+                <div class="flex items-center space-x-3 p-3 rounded-xl hover:bg-tanpopo-green/5 transition-colors cursor-pointer" onclick="scrollToSection('chuong-trinh-hoc')">
+                    <span class="text-xl">📘</span>
+                    <span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">Chương trình học</span>
+                </div>
+                <div class="flex items-center space-x-3 p-3 rounded-xl hover:bg-tanpopo-green/5 transition-colors cursor-pointer" onclick="scrollToSection('co-so-vat-chat')">
+                    <span class="text-xl">🏫</span>
+                    <span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">Cơ sở vật chất</span>
+                </div>
+                <div class="flex items-center space-x-3 p-3 rounded-xl hover:bg-tanpopo-green/5 transition-colors cursor-pointer" onclick="scrollToSection('doi-ngu')">
+                    <span class="text-xl">👩‍🏫</span>
+                    <span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">Đội ngũ</span>
+                </div>
+                <div class="flex items-center space-x-3 p-3 rounded-xl hover:bg-tanpopo-green/5 transition-colors cursor-pointer" onclick="scrollToSection('tuyen-sinh')">
+                    <span class="text-xl">🎒</span>
+                    <span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">Tuyển sinh</span>
+                </div>
+                <div class="flex items-center space-x-3 p-3 rounded-xl hover:bg-tanpopo-green/5 transition-colors cursor-pointer" onclick="scrollToSection('lien-he')">
+                    <span class="text-xl">📞</span>
+                    <span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">Liên hệ</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- @END_COMPONENT: HoverSidebar -->
+
+    <!-- Main Content -->
+    <main class="pt-16 lg:pl-16">
+        <!-- @COMPONENT: Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-tanpopo-white to-tanpopo-beige/20 overflow-hidden">
+            <!-- Background decorative elements -->
+            <div class="absolute inset-0 opacity-10">
+                <!-- Cheerful dandelion seeds floating pattern -->
+                <div class="absolute top-20 left-10 w-4 h-4 bg-tanpopo-beige rounded-full animate-bounce"></div>
+                <div class="absolute top-40 right-20 w-3 h-3 bg-tanpopo-green rounded-full animate-pulse"></div>
+                <div class="absolute bottom-32 left-1/4 w-5 h-5 bg-tanpopo-beige rounded-full animate-bounce" style="animation-delay: 0.5s"></div>
+                <div class="absolute bottom-20 right-1/3 w-3 h-3 bg-tanpopo-green rounded-full animate-pulse" style="animation-delay: 1s"></div>
+            </div>
+            
+            <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+                <!-- Main logo display -->
+                <div class="mb-8 fade-in">
+                    <!-- Placeholder for the main Tanpopo Academy logo -->
+                    <div class="w-32 h-32 mx-auto bg-tanpopo-green rounded-full flex items-center justify-center mb-6">
+                        <span class="text-white font-bold text-4xl">🌼</span>
+                    </div>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-tanpopo-green mb-6 leading-tight fade-in">
+                    Tanpopo Academy
+                    <br />
+                    <span class="text-tanpopo-beige">Môi trường mầm non</span>
+                    <br />
+                    an toàn & truyền cảm hứng
+                </h1>
+                
+                <p class="text-lg md:text-xl text-tanpopo-green/80 mb-8 max-w-3xl mx-auto leading-relaxed fade-in">
+                    Nơi những mầm xanh nhỏ bé được chăm sóc tận tình, phát triển toàn diện trong môi trường giáo dục hiện đại, 
+                    thân thiện và đầy yêu thương.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+                    <button onclick="scrollToSection('tuyen-sinh')" class="bg-tanpopo-green text-white px-8 py-4 rounded-full font-medium hover:bg-tanpopo-green/90 transition-all duration-300 hover-lift">
+                        Đăng ký tham quan
+                    </button>
+                    <button onclick="scrollToSection('chuong-trinh-hoc')" class="border-2 border-tanpopo-green text-tanpopo-green px-8 py-4 rounded-full font-medium hover:bg-tanpopo-green hover:text-white transition-all duration-300 hover-lift">
+                        Tìm hiểu chương trình
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Hero Section -->
+
+        <!-- @COMPONENT: Programs Section -->
+        <section id="chuong-trinh-hoc" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-tanpopo-green mb-6">Chương trình học</h2>
+                    <p class="text-xl text-tanpopo-green/70 max-w-3xl mx-auto">
+                        Phương pháp giáo dục tiên tiến, kết hợp giữa truyền thống và hiện đại để phát triển toàn diện cho trẻ
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Program Card 1 -->
+                    <div class="bg-tanpopo-white rounded-2xl p-8 hover-lift fade-in">
+                        <div class="w-16 h-16 bg-tanpopo-beige rounded-xl flex items-center justify-center mb-6">
+                            <span class="text-2xl">🎨</span>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-tanpopo-green mb-4">Sáng tạo & Nghệ thuật</h3>
+                        <p class="text-tanpopo-green/70 mb-6">Phát triển khả năng sáng tạo, thẩm mỹ và tư duy nghệ thuật qua các hoạt động vẽ, tô màu, làm đồ chơi từ nguyên liệu tự nhiên.</p>
+                        <ul class="space-y-2 text-sm text-tanpopo-green/60">
+                            <li>• Vẽ tranh tự do</li>
+                            <li>• Tạo hình từ đất sét</li>
+                            <li>• Làm đồ chơi handmade</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Program Card 2 -->
+                    <div class="bg-tanpopo-white rounded-2xl p-8 hover-lift fade-in">
+                        <div class="w-16 h-16 bg-tanpopo-beige rounded-xl flex items-center justify-center mb-6">
+                            <span class="text-2xl">🧮</span>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-tanpopo-green mb-4">Toán học sớm</h3>
+                        <p class="text-tanpopo-green/70 mb-6">Làm quen với số học qua trò chơi và hoạt động thực hành, giúp trẻ hình thành tư duy logic cơ bản.</p>
+                        <ul class="space-y-2 text-sm text-tanpopo-green/60">
+                            <li>• Đếm số qua trò chơi</li>
+                            <li>• Nhận biết hình khối</li>
+                            <li>• So sánh kích thước</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Program Card 3 -->
+                    <div class="bg-tanpopo-white rounded-2xl p-8 hover-lift fade-in">
+                        <div class="w-16 h-16 bg-tanpopo-beige rounded-xl flex items-center justify-center mb-6">
+                            <span class="text-2xl">🌱</span>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-tanpopo-green mb-4">Khám phá thiên nhiên</h3>
+                        <p class="text-tanpopo-green/70 mb-6">Tìm hiểu về thế giới xung quanh qua việc trồng cây, chăm sóc động vật nhỏ và các thí nghiệm khoa học đơn giản.</p>
+                        <ul class="space-y-2 text-sm text-tanpopo-green/60">
+                            <li>• Vườn rau mini</li>
+                            <li>• Quan sát côn trùng</li>
+                            <li>• Thí nghiệm nước</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Program Card 4 -->
+                    <div class="bg-tanpopo-white rounded-2xl p-8 hover-lift fade-in">
+                        <div class="w-16 h-16 bg-tanpopo-beige rounded-xl flex items-center justify-center mb-6">
+                            <span class="text-2xl">🗣️</span>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-tanpopo-green mb-4">Phát triển ngôn ngữ</h3>
+                        <p class="text-tanpopo-green/70 mb-6">Rèn luyện khả năng giao tiếp, kể chuyện và phát âm chuẩn qua các hoạt động đọc sách, kể chuyện cổ tích.</p>
+                        <ul class="space-y-2 text-sm text-tanpopo-green/60">
+                            <li>• Đọc sách hàng ngày</li>
+                            <li>• Kể chuyện sáng tạo</li>
+                            <li>• Luyện phát âm</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Program Card 5 -->
+                    <div class="bg-tanpopo-white rounded-2xl p-8 hover-lift fade-in">
+                        <div class="w-16 h-16 bg-tanpopo-beige rounded-xl flex items-center justify-center mb-6">
+                            <span class="text-2xl">🤸</span>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-tanpopo-green mb-4">Thể chất & Vận động</h3>
+                        <p class="text-tanpopo-green/70 mb-6">Phát triển sức khỏe và kỹ năng vận động qua các trò chơi thể thao phù hợp với lứa tuổi mầm non.</p>
+                        <ul class="space-y-2 text-sm text-tanpopo-green/60">
+                            <li>• Yoga trẻ em</li>
+                            <li>• Trò chơi vận động</li>
+                            <li>• Thể dục nhịp điệu</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Program Card 6 -->
+                    <div class="bg-tanpopo-white rounded-2xl p-8 hover-lift fade-in">
+                        <div class="w-16 h-16 bg-tanpopo-beige rounded-xl flex items-center justify-center mb-6">
+                            <span class="text-2xl">🤝</span>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-tanpopo-green mb-4">Kỹ năng xã hội</h3>
+                        <p class="text-tanpopo-green/70 mb-6">Học cách chia sẻ, hợp tác và giải quyết xung đột một cách hòa bình qua các hoạt động nhóm.</p>
+                        <ul class="space-y-2 text-sm text-tanpopo-green/60">
+                            <li>• Hoạt động nhóm</li>
+                            <li>• Học cách chia sẻ</li>
+                            <li>• Giải quyết tranh cãi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Programs Section -->
+
+        <!-- @COMPONENT: Facilities Section -->
+        <section id="co-so-vat-chat" class="py-20 bg-tanpopo-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-tanpopo-green mb-6">Cơ sở vật chất</h2>
+                    <p class="text-xl text-tanpopo-green/70 max-w-3xl mx-auto">
+                        Không gian học tập hiện đại, an toàn và thân thiện, được thiết kế đặc biệt cho trẻ em mầm non
+                    </p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="fade-in">
+                        <!-- Modern kindergarten classroom with colorful furniture and natural lighting -->
+                        <img src="https://images.unsplash.com/photo-1559223607-b4d0555ae227?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                             alt="Phòng học hiện đại với nội thất màu sắc" 
+                             class="rounded-2xl shadow-lg w-full h-auto" />
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="text-3xl font-display font-semibold text-tanpopo-green mb-6">Phòng học thông minh</h3>
+                        <p class="text-tanpopo-green/70 mb-6 text-lg">
+                            Các phòng học được trang bị hệ thống âm thanh, ánh sáng tự nhiên và nội thất an toàn, 
+                            tạo không gian học tập thoải mái và hiệu quả.
+                        </p>
+                        <ul class="space-y-3 text-tanpopo-green/70">
+                            <li class="flex items-center"><span class="mr-3">✓</span> Bàn ghế ergonomic phù hợp với trẻ em</li>
+                            <li class="flex items-center"><span class="mr-3">✓</span> Hệ thống điều hòa không khí hiện đại</li>
+                            <li class="flex items-center"><span class="mr-3">✓</span> Bảng tương tác thông minh</li>
+                            <li class="flex items-center"><span class="mr-3">✓</span> Khu vực đọc sách thoải mái</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="order-2 lg:order-1 fade-in">
+                        <h3 class="text-3xl font-display font-semibold text-tanpopo-green mb-6">Sân chơi an toàn</h3>
+                        <p class="text-tanpopo-green/70 mb-6 text-lg">
+                            Sân chơi ngoài trời rộng rãi với các thiết bị vui chơi đạt chuẩn quốc tế, 
+                            giúp trẻ vận động và phát triển thể chất.
+                        </p>
+                        <ul class="space-y-3 text-tanpopo-green/70">
+                            <li class="flex items-center"><span class="mr-3">✓</span> Cầu trượt và xích đu an toàn</li>
+                            <li class="flex items-center"><span class="mr-3">✓</span> Sân bóng mini có mái che</li>
+                            <li class="flex items-center"><span class="mr-3">✓</span> Khu vực cát trắng vệ sinh</li>
+                            <li class="flex items-center"><span class="mr-3">✓</span> Camera giám sát 24/7</li>
+                        </ul>
+                    </div>
+                    <div class="order-1 lg:order-2 fade-in">
+                        <!-- Outdoor playground with safe equipment for children -->
+                        <img src="https://images.unsplash.com/photo-1567186937675-a5131c8a89ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                             alt="Sân chơi ngoài trời với thiết bị an toàn" 
+                             class="rounded-2xl shadow-lg w-full h-auto" />
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 fade-in">
+                    <div class="text-center">
+                        <!-- Healthy meal being served in kindergarten cafeteria -->
+                        <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
+                             alt="Khu vực ăn uống sạch sẽ" 
+                             class="rounded-xl w-full h-48 object-cover mb-4" />
+                        <h4 class="font-display font-semibold text-tanpopo-green mb-2">Khu ăn uống</h4>
+                        <p class="text-tanpopo-green/70 text-sm">Thực đơn dinh dưỡng được chế biến tại chỗ</p>
+                    </div>
+                    <div class="text-center">
+                        <!-- Music and arts room with instruments for children -->
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
+                             alt="Phòng âm nhạc với nhạc cụ trẻ em" 
+                             class="rounded-xl w-full h-48 object-cover mb-4" />
+                        <h4 class="font-display font-semibold text-tanpopo-green mb-2">Phòng âm nhạc</h4>
+                        <p class="text-tanpopo-green/70 text-sm">Không gian sáng tạo với nhạc cụ phù hợp</p>
+                    </div>
+                    <div class="text-center">
+                        <!-- Medical room with first aid equipment -->
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
+                             alt="Phòng y tế với trang thiết bị cần thiết" 
+                             class="rounded-xl w-full h-48 object-cover mb-4" />
+                        <h4 class="font-display font-semibold text-tanpopo-green mb-2">Phòng y tế</h4>
+                        <p class="text-tanpopo-green/70 text-sm">Chăm sóc sức khỏe tận tình và chuyên nghiệp</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Facilities Section -->
+
+        <!-- @COMPONENT: Staff Section -->
+        <section id="doi-ngu" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-tanpopo-green mb-6">Đội ngũ giáo viên</h2>
+                    <p class="text-xl text-tanpopo-green/70 max-w-3xl mx-auto">
+                        Đội ngũ giáo viên tận tâm, giàu kinh nghiệm và được đào tạo chuyên nghiệp trong lĩnh vực giáo dục mầm non
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Staff Card 1 -->
+                    <div class="bg-tanpopo-white rounded-2xl p-8 text-center hover-lift fade-in">
+                        <!-- Professional kindergarten teacher portrait -->
+                        <img src="https://pixabay.com/get/ga0581c1692111060d4df113f65789cd9ab8d273cb7daac9013ae00ad0754a84676d385e0ee8628ce8c0dfec2b451c58dc48242776e8baa5b7e2231fabad0cbab_1280.jpg" 
+                             alt="Cô Nguyễn Thu Hà - Hiệu trưởng" 
+                             class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                        <h3 class="font-display font-semibold text-tanpopo-green mb-2">Cô Nguyễn Thu Hà</h3>
+                        <p class="text-tanpopo-beige font-medium mb-3">Hiệu trưởng</p>
+                        <p class="text-tanpopo-green/70 text-sm mb-4">15 năm kinh nghiệm trong lĩnh vực giáo dục mầm non. Thạc sĩ Tâm lý học Trẻ em.</p>
+                        <div class="flex justify-center space-x-2">
+                            <span class="bg-tanpopo-green/10 text-tanpopo-green px-3 py-1 rounded-full text-xs">Tâm lý học</span>
+                            <span class="bg-tanpopo-green/10 text-tanpopo-green px-3 py-1 rounded-full text-xs">Lãnh đạo</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Staff Card 2 -->
+                    <div class="bg-tanpopo-white rounded-2xl p-8 text-center hover-lift fade-in">
+                        <!-- Asian kindergarten teacher smiling with children -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300" 
+                             alt="Cô Trần Minh Châu - Giáo viên chính" 
+                             class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                        <h3 class="font-display font-semibold text-tanpopo-green mb-2">Cô Trần Minh Châu</h3>
+                        <p class="text-tanpopo-beige font-medium mb-3">Giáo viên chính</p>
+                        <p class="text-tanpopo-green/70 text-sm mb-4">8 năm kinh nghiệm giảng dạy. Chuyên về phát triển ngôn ngữ và sáng tạo.</p>
+                        <div class="flex justify-center space-x-2">
+                            <span class="bg-tanpopo-green/10 text-tanpopo-green px-3 py-1 rounded-full text-xs">Ngôn ngữ</span>
+                            <span class="bg-tanpopo-green/10 text-tanpopo-green px-3 py-1 rounded-full text-xs">Sáng tạo</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Staff Card 3 -->
+                    <div class="bg-tanpopo-white rounded-2xl p-8 text-center hover-lift fade-in">
+                        <!-- Enthusiastic kindergarten teacher with art supplies -->
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300" 
+                             alt="Cô Lê Thúy Hằng - Giáo viên nghệ thuật" 
+                             class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                        <h3 class="font-display font-semibold text-tanpopo-green mb-2">Cô Lê Thúy Hằng</h3>
+                        <p class="text-tanpopo-beige font-medium mb-3">Giáo viên nghệ thuật</p>
+                        <p class="text-tanpopo-green/70 text-sm mb-4">Chuyên gia về giáo dục thẩm mỹ và phát triển khả năng sáng tạo cho trẻ.</p>
+                        <div class="flex justify-center space-x-2">
+                            <span class="bg-tanpopo-green/10 text-tanpopo-green px-3 py-1 rounded-full text-xs">Nghệ thuật</span>
+                            <span class="bg-tanpopo-green/10 text-tanpopo-green px-3 py-1 rounded-full text-xs">Thẩm mỹ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-tanpopo-beige/20 rounded-2xl p-8 fade-in">
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <div>
+                            <div class="text-3xl font-bold text-tanpopo-green mb-2">15+</div>
+                            <p class="text-tanpopo-green/70">Năm kinh nghiệm trung bình</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-tanpopo-green mb-2">100%</div>
+                            <p class="text-tanpopo-green/70">Giáo viên có bằng cấp chuyên môn</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-tanpopo-green mb-2">24/7</div>
+                            <p class="text-tanpopo-green/70">Hỗ trợ phụ huynh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Staff Section -->
+
+        <!-- @COMPONENT: Admissions Section -->
+        <section id="tuyen-sinh" class="py-20 bg-tanpopo-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-tanpopo-green mb-6">Tuyển sinh & Học phí</h2>
+                    <p class="text-xl text-tanpopo-green/70 max-w-3xl mx-auto">
+                        Thông tin chi tiết về quy trình tuyển sinh và học phí cho năm học mới
+                    </p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                    <!-- Admission Process -->
+                    <div class="fade-in">
+                        <h3 class="text-3xl font-display font-semibold text-tanpopo-green mb-8">Quy trình tuyển sinh</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-tanpopo-green text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+                                <div>
+                                    <h4 class="font-semibold text-tanpopo-green mb-2">Đăng ký tham quan</h4>
+                                    <p class="text-tanpopo-green/70">Liên hệ để đặt lịch tham quan cơ sở vật chất và tìm hiểu chương trình học.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-tanpopo-green text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+                                <div>
+                                    <h4 class="font-semibold text-tanpopo-green mb-2">Nộp hồ sơ</h4>
+                                    <p class="text-tanpopo-green/70">Chuẩn bị hồ sơ gồm giấy khai sinh, giấy khám sức khỏe và hình ảnh của bé.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-tanpopo-green text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+                                <div>
+                                    <h4 class="font-semibold text-tanpopo-green mb-2">Phỏng vấn & Làm quen</h4>
+                                    <p class="text-tanpopo-green/70">Buổi gặp gỡ giữa giáo viên, phụ huynh và bé để hiểu rõ nhu cầu và tính cách.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-tanpopo-green text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
+                                <div>
+                                    <h4 class="font-semibold text-tanpopo-green mb-2">Nhập học</h4>
+                                    <p class="text-tanpopo-green/70">Hoàn tất thủ tục và bắt đầu hành trình học tập cùng Tanpopo Academy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pricing -->
+                    <div class="fade-in">
+                        <h3 class="text-3xl font-display font-semibold text-tanpopo-green mb-8">Học phí</h3>
+                        <div class="space-y-6">
+                            <div class="bg-white rounded-xl p-6 border-2 border-tanpopo-green/20">
+                                <h4 class="font-display font-semibold text-tanpopo-green mb-4 text-xl">Gói Bán trú</h4>
+                                <div class="text-3xl font-bold text-tanpopo-green mb-4">3.500.000đ<span class="text-lg font-normal">/tháng</span></div>
+                                <ul class="space-y-2 text-tanpopo-green/70">
+                                    <li>• Thời gian: 7:30 - 17:00</li>
+                                    <li>• 3 bữa ăn + 2 bữa phụ</li>
+                                    <li>• Hoạt động ngoại khóa</li>
+                                    <li>• Đưa đón tận nhà</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white rounded-xl p-6 border-2 border-tanpopo-beige">
+                                <h4 class="font-display font-semibold text-tanpopo-green mb-4 text-xl">Gói Nửa ngày</h4>
+                                <div class="text-3xl font-bold text-tanpopo-green mb-4">2.200.000đ<span class="text-lg font-normal">/tháng</span></div>
+                                <ul class="space-y-2 text-tanpopo-green/70">
+                                    <li>• Thời gian: 7:30 - 11:30</li>
+                                    <li>• 1 bữa phụ</li>
+                                    <li>• Học cơ bản</li>
+                                    <li>• Phù hợp bé nhỏ</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-tanpopo-beige/20 rounded-xl">
+                            <p class="text-sm text-tanpopo-green/70">
+                                <strong>Ưu đãi:</strong> Giảm 10% học phí tháng đầu cho bé đăng ký trước 31/12. 
+                                Miễn phí đồng phục và sách vở trong tháng đầu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Registration Form -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg fade-in">
+                    <h3 class="text-2xl font-display font-semibold text-tanpopo-green mb-6 text-center">Đăng ký tham quan ngay</h3>
+                    <form class="grid md:grid-cols-2 gap-6" onsubmit="handleQuickRegistration(event)">
+                        <div>
+                            <label class="block text-tanpopo-green font-medium mb-2">Tên phụ huynh *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-tanpopo-green/20 rounded-xl focus:outline-none focus:border-tanpopo-green">
+                        </div>
+                        <div>
+                            <label class="block text-tanpopo-green font-medium mb-2">Số điện thoại *</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-tanpopo-green/20 rounded-xl focus:outline-none focus:border-tanpopo-green">
+                        </div>
+                        <div>
+                            <label class="block text-tanpopo-green font-medium mb-2">Tên bé</label>
+                            <input type="text" class="w-full px-4 py-3 border border-tanpopo-green/20 rounded-xl focus:outline-none focus:border-tanpopo-green">
+                        </div>
+                        <div>
+                            <label class="block text-tanpopo-green font-medium mb-2">Tuổi bé</label>
+                            <select class="w-full px-4 py-3 border border-tanpopo-green/20 rounded-xl focus:outline-none focus:border-tanpopo-green">
+                                <option>18 tháng - 2 tuổi</option>
+                                <option>2 - 3 tuổi</option>
+                                <option>3 - 4 tuổi</option>
+                                <option>4 - 5 tuổi</option>
+                                <option>5 - 6 tuổi</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-tanpopo-green font-medium mb-2">Thời gian mong muốn tham quan</label>
+                            <input type="datetime-local" class="w-full px-4 py-3 border border-tanpopo-green/20 rounded-xl focus:outline-none focus:border-tanpopo-green">
+                        </div>
+                        <div class="md:col-span-2">
+                            <button type="submit" class="w-full bg-tanpopo-green text-white py-4 rounded-xl font-semibold hover:bg-tanpopo-green/90 transition-colors duration-200">
+                                Đăng ký tham quan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Admissions Section -->
+
+        <!-- @COMPONENT: Contact Section -->
+        <section id="lien-he" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-tanpopo-green mb-6">Liên hệ</h2>
+                    <p class="text-xl text-tanpopo-green/70 max-w-3xl mx-auto">
+                        Hãy để lại thông tin để chúng tôi tư vấn và hỗ trợ bạn tốt nhất
+                    </p>
+                </div>
+                
+                <div class="grid lg:grid-cols-3 gap-12">
+                    <!-- Contact Information -->
+                    <div class="lg:col-span-1 fade-in">
+                        <h3 class="text-2xl font-display font-semibold text-tanpopo-green mb-6">Thông tin liên hệ</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-tanpopo-beige rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white">📍</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-tanpopo-green mb-1">Địa chỉ</h4>
+                                    <p class="text-tanpopo-green/70">123 Đường Hoa Sen, Phường 5, Quận 3, TP.HCM</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-tanpopo-beige rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white">📞</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-tanpopo-green mb-1">Điện thoại</h4>
+                                    <p class="text-tanpopo-green/70">028-3456-7890</p>
+                                    <p class="text-tanpopo-green/70">0909-123-456</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-tanpopo-beige rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white">✉️</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-tanpopo-green mb-1">Email</h4>
+                                    <p class="text-tanpopo-green/70">info@tanpopoacademy.edu.vn</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-tanpopo-beige rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white">🕒</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-tanpopo-green mb-1">Giờ mở cửa</h4>
+                                    <p class="text-tanpopo-green/70">Thứ 2 - Thứ 6: 7:00 - 18:00</p>
+                                    <p class="text-tanpopo-green/70">Thứ 7: 8:00 - 12:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="lg:col-span-2 fade-in">
+                        <form class="bg-tanpopo-white rounded-2xl p-8" onsubmit="handleContactForm(event)">
+                            <h3 class="text-2xl font-display font-semibold text-tanpopo-green mb-6">Gửi tin nhắn cho chúng tôi</h3>
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-tanpopo-green font-medium mb-2">Họ và tên *</label>
+                                    <input type="text" required class="w-full px-4 py-3 border border-tanpopo-green/20 rounded-xl focus:outline-none focus:border-tanpopo-green">
+                                </div>
+                                <div>
+                                    <label class="block text-tanpopo-green font-medium mb-2">Email *</label>
+                                    <input type="email" required class="w-full px-4 py-3 border border-tanpopo-green/20 rounded-xl focus:outline-none focus:border-tanpopo-green">
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-tanpopo-green font-medium mb-2">Số điện thoại</label>
+                                    <input type="tel" class="w-full px-4 py-3 border border-tanpopo-green/20 rounded-xl focus:outline-none focus:border-tanpopo-green">
+                                </div>
+                                <div>
+                                    <label class="block text-tanpopo-green font-medium mb-2">Chủ đề</label>
+                                    <select class="w-full px-4 py-3 border border-tanpopo-green/20 rounded-xl focus:outline-none focus:border-tanpopo-green">
+                                        <option>Tư vấn chương trình học</option>
+                                        <option>Đăng ký tham quan</option>
+                                        <option>Thông tin học phí</option>
+                                        <option>Khác</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-tanpopo-green font-medium mb-2">Tin nhắn *</label>
+                                <textarea required rows="5" class="w-full px-4 py-3 border border-tanpopo-green/20 rounded-xl focus:outline-none focus:border-tanpopo-green" placeholder="Xin chào, tôi muốn tìm hiểu thêm về chương trình học tại Tanpopo Academy..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-tanpopo-green text-white py-4 rounded-xl font-semibold hover:bg-tanpopo-green/90 transition-colors duration-200">
+                                Gửi tin nhắn
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Map Section -->
+                <div class="mt-16 fade-in">
+                    <h3 class="text-2xl font-display font-semibold text-tanpopo-green mb-6 text-center">Vị trí trường học</h3>
+                    <div class="bg-tanpopo-white rounded-2xl p-4">
+                        <!-- Google Maps placeholder -->
+                        <div class="w-full h-96 bg-tanpopo-green/10 rounded-xl flex items-center justify-center">
+                            <div class="text-center">
+                                <span class="text-4xl mb-4 block">🗺️</span>
+                                <p class="text-tanpopo-green font-medium">Bản đồ Google Maps</p>
+                                <p class="text-tanpopo-green/70 text-sm mt-2">123 Đường Hoa Sen, Phường 5, Quận 3, TP.HCM</p>
+                                <!-- TODO: Integrate Google Maps API -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Contact Section -->
+
+        <!-- @COMPONENT: Testimonials Section -->
+        <section class="py-20 bg-tanpopo-beige/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-tanpopo-green mb-6">Phụ huynh nói gì về chúng tôi</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl p-8 hover-lift fade-in">
+                        <div class="flex mb-4">
+                            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p class="text-tanpopo-green/70 mb-6">"Tanpopo là lựa chọn tuyệt vời cho con tôi. Các cô giáo rất tận tâm và môi trường học tập thật sự an toàn, sạch sẽ."</p>
+                        <div class="flex items-center">
+                            <!-- Happy parent testimonial photo -->
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=60&h=60" 
+                                 alt="Chị Nguyễn Lan Anh" 
+                                 class="w-12 h-12 rounded-full mr-4 object-cover" />
+                            <div>
+                                <h4 class="font-semibold text-tanpopo-green">Chị Nguyễn Lan Anh</h4>
+                                <p class="text-tanpopo-green/60 text-sm">Phụ huynh bé Minh An</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 hover-lift fade-in">
+                        <div class="flex mb-4">
+                            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p class="text-tanpopo-green/70 mb-6">"Con tôi rất thích đi học ở đây. Mỗi ngày về nhà đều kể những điều thú vị và kiến thức mới học được."</p>
+                        <div class="flex items-center">
+                            <!-- Satisfied father testimonial photo -->
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=60&h=60" 
+                                 alt="Anh Trần Đức Hòa" 
+                                 class="w-12 h-12 rounded-full mr-4 object-cover" />
+                            <div>
+                                <h4 class="font-semibold text-tanpopo-green">Anh Trần Đức Hòa</h4>
+                                <p class="text-tanpopo-green/60 text-sm">Phụ huynh bé Bảo Châu</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 hover-lift fade-in">
+                        <div class="flex mb-4">
+                            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p class="text-tanpopo-green/70 mb-6">"Phương pháp giáo dục ở Tanpopo giúp con tôi phát triển toàn diện cả về tri thức lẫn nhân cách."</p>
+                        <div class="flex items-center">
+                            <!-- Caring mother testimonial photo -->
+                            <img src="https://pixabay.com/get/g76dc2f55cee7c382751e2e42a48f67b63a71f0104f0ad332cc6c264e7db538a83357e4f166312ee815434729ebc4a1d5f73446c7d37a4824143e017b48120499_1280.jpg" 
+                                 alt="Chị Phạm Thu Hường" 
+                                 class="w-12 h-12 rounded-full mr-4 object-cover" />
+                            <div>
+                                <h4 class="font-semibold text-tanpopo-green">Chị Phạm Thu Hường</h4>
+                                <p class="text-tanpopo-green/60 text-sm">Phụ huynh bé Kim Ngân</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Testimonials Section -->
+    </main>
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-tanpopo-green text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-tanpopo-green font-bold text-sm">T</span>
+                        </div>
+                        <span class="font-display font-semibold text-lg">Tanpopo Academy</span>
+                    </div>
+                    <p class="text-white/80 mb-4">Môi trường mầm non an toàn, truyền cảm hứng cho sự phát triển toàn diện của trẻ.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">📘</a>
+                        <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">📷</a>
+                        <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">📧</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-display font-semibold mb-4">Chương trình</h3>
+                    <ul class="space-y-2 text-white/80">
+                        <li><a href="#" class="hover:text-white transition-colors">Sáng tạo & Nghệ thuật</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Toán học sớm</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Khám phá thiên nhiên</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Phát triển ngôn ngữ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-display font-semibold mb-4">Thông tin</h3>
+                    <ul class="space-y-2 text-white/80">
+                        <li><a href="#doi-ngu" class="hover:text-white transition-colors">Đội ngũ giáo viên</a></li>
+                        <li><a href="#co-so-vat-chat" class="hover:text-white transition-colors">Cơ sở vật chất</a></li>
+                        <li><a href="#tuyen-sinh" class="hover:text-white transition-colors">Tuyển sinh</a></li>
+                        <li><a href="#lien-he" class="hover:text-white transition-colors">Liên hệ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-display font-semibold mb-4">Liên hệ</h3>
+                    <ul class="space-y-2 text-white/80">
+                        <li>📍 123 Đường Hoa Sen, Q.3, TP.HCM</li>
+                        <li>📞 028-3456-7890</li>
+                        <li>✉️ info@tanpopoacademy.edu.vn</li>
+                        <li>🕒 T2-T6: 7:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 pt-8 text-center text-white/60">
+                <p>&copy; 2024 Tanpopo Academy. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // Mobile menu toggle
+        (function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        })();
+
+        // Smooth scrolling function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                const offsetTop = element.offsetTop - 80; // Account for fixed header
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Add click handlers for navigation links
+        (function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    scrollToSection(targetId);
+                });
+            });
+        })();
+
+        // Fade in animation on scroll
+        (function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        })();
+
+        // Form submission handlers
+        function handleQuickRegistration(event) {
+            event.preventDefault();
+            // TODO: Implement form submission logic
+            alert('Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.');
+        }
+
+        function handleContactForm(event) {
+            event.preventDefault();
+            // TODO: Implement contact form submission logic
+            alert('Tin nhắn của bạn đã được gửi thành công! Chúng tôi sẽ phản hồi trong vòng 24 giờ.');
+        }
+
+        // Parallax effect for hero section
+        (function() {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.parallax');
+                
+                parallaxElements.forEach(element => {
+                    const speed = 0.5;
+                    element.style.transform = `translateY(${scrolled * speed}px)`;
+                });
+            });
+        })();
+
+        // Loading animation
+        (function() {
+            window.addEventListener('load', () => {
+                document.body.classList.add('loaded');
+            });
+        })();
+    </script>
+</body>
+</html>
